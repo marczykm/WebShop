@@ -1,7 +1,6 @@
 package pl.marczyk.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by marcin on 07.09.15.
