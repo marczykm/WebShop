@@ -1,6 +1,9 @@
 package pl.marczyk.domain;
 
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import pl.marczyk.model.Product;
@@ -10,4 +13,6 @@ import pl.marczyk.model.Product;
  */
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Long> {
+    Iterable<Product> findAll(Sort sort);
+    Page<Product> findAll(Pageable pageable);
 }
