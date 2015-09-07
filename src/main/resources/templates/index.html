@@ -6,7 +6,15 @@
 
     <main>
         <div class="container">
-            <p>Hello, World!</p>
+            <h1>Products</h1>
+
+            <ul th:each="prod : ${products}" class="collection">
+                <li class="collection-item">
+                    <span class="title" th:text="${prod.name}"></span>
+                    <p th:text="${prod.description}"></p>
+                </li>
+            </ul>
+
         </div>
     </main>
 
