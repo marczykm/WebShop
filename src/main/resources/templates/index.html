@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="fragments/head :: head"></head>
+<body>
+    <header th:substituteby="fragments/header :: header"></header>
+
+    <main>
+        <div class="container">
+            <p>Hello, World!</p>
+        </div>
+    </main>
+
+    <footer th:substituteby="fragments/footer :: footer"></footer>
+
+    <div id="javascript" th:substituteby="fragments/javascript :: div"></div>
+</body>
+</html>
