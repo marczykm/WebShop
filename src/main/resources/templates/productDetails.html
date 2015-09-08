@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="fragments/head :: head"></head>
+<body>
+    <header th:substituteby="fragments/header :: header"></header>
+
+    <main>
+        <div class="container">
+            <h3 th:text="${product.name}"></h3>
+            <div class="row valign-wrapper">
+                <img class="col m4 s12 responsive-img materialboxed" th:src="${product.photo}" alt=""/>
+                <div class="col m6 s12 valign" th:text="${product.description}"></div>
+                <h5 class="col m1 s12 orange white-text" th:text="${product.price}"></h5>
+            </div>
+            <div class="row">
+                <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">add_shopping_cart</i>Add to cart</a>
+            </div>
+            <div class="row">
+                <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">$</i>Buy now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer th:substituteby="fragments/footer :: footer"></footer>
+
+    <div id="javascript" th:substituteby="fragments/javascript :: div"></div>
+</body>
+</html>

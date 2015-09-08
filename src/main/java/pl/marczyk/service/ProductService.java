@@ -33,6 +33,10 @@ public class ProductService {
         return productRepository.findAll(new PageRequest(pageNumber, pageSize));
     }
 
+    public Product findOneBy(Long id) {
+        return productRepository.findOne(id);
+    }
+
     public int getTotalPages(){
         return productRepository.findAll(new PageRequest(0, pageSize)).getTotalPages();
     }
