@@ -48,4 +48,8 @@ public class ProductService {
         }
         return pages;
     }
+
+    public Page<Product> getRecommendedProducts() {
+        return productRepository.findAll(new PageRequest(0, 3));
+    }
 }
