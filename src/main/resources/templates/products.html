@@ -10,10 +10,10 @@
 
             <ul class="collection">
                 <li th:each="prod : ${products}" class="collection-item">
-                    <a th:href="@{/products/{id}(id=${prod.id})}" class="row valign-wrapper">
-                        <img th:src="${prod.photo}" class="responsive-img thumbnail col m2 valign" alt=""/>
-                        <span class="title col m9 valign" th:text="${prod.name}"></span>
-                        <div class="col m1 right valign" th:text="${prod.price}"></div>
+                    <a th:href="@{/products/{id}(id=${prod.id})}" class="row ">
+                        <img th:src="${prod.photo}" class="responsive-img thumbnail col m2 " alt=""/>
+                        <span class="title col m9 " th:text="${prod.name}"></span>
+                        <div class="col m1 right " th:text="${prod.price}"></div>
                     </a>
                 </li>
             </ul>

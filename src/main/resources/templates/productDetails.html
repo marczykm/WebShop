@@ -7,17 +7,24 @@
     <main>
         <div class="container">
             <h3 th:text="${product.name}"></h3>
-            <div class="row valign-wrapper">
+            <div class="row ">
                 <img class="col m4 s12 responsive-img materialboxed" th:src="${product.photo}" alt=""/>
-                <div class="col m6 s12 valign" th:text="${product.description}"></div>
-                <h5 class="col m1 s12 orange white-text" th:text="${product.price}"></h5>
+                <div class="col m8 s12">
+                    <div class="row">
+                        <h5 class="col m4 s12 orange white-text center-align right" th:inline="text">$ [[${product.price}]]</h5>
+                    </div>
+                    <div class="row">
+                        <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">add_shopping_cart</i>Add to cart</a>
+                    </div>
+                    <div class="row">
+                        <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">$</i>Buy now</a>
+                    </div>
+                </div>
+                <div class="col m12 s12 ">
+                    <p th:text="${product.description}"></p>
+                </div>
             </div>
-            <div class="row">
-                <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">add_shopping_cart</i>Add to cart</a>
-            </div>
-            <div class="row">
-                <a class="col m4 s12 waves-effect btn right" href="#!"><i class="material-icons left">$</i>Buy now</a>
-            </div>
+
         </div>
     </main>
 
