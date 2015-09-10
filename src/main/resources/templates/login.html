@@ -6,11 +6,19 @@
 
     <main>
         <div class="container">
-            <div th:if="${param.error}" >
-                    Invalid username and password.
+            <div class="card red lighten-2" th:if="${param.error}" >
+                <div class="card-content">
+                    <div class="card-title">
+                        Invalid username and password.
+                    </div>
+                </div>
             </div>
-            <div th:if="${param.logout}">
-                You have been logged out.
+            <div class="card orange lighten-2" th:if="${param.logout}">
+                <div class="card-content">
+                    <div class="card-title">
+                        You have been logged out.
+                    </div>
+                </div>
             </div>
             <h1>Log in</h1>
             <form th:action="@{/login}" method="post">
