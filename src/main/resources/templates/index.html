@@ -6,6 +6,7 @@
 
     <main>
         <div class="container">
+            <h3 th:if="${username != 'anonymousUser'}"><span>Welcome </span><span th:text="${username}"></span><span>!</span></h3>
             <h1>Recommended products</h1>
             <div class="slider">
                 <ul class="slides">
