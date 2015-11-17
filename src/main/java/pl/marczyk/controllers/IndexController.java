@@ -21,7 +21,6 @@ public class IndexController {
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("products", productService.getRecommendedProducts());
-        model.addAttribute("username", SecurityContextHolder.getContext().getAuthentication().getName());
         return "index";
     }
 }

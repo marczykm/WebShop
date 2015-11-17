@@ -6,7 +6,8 @@
 
     <main>
         <div class="container">
-            <h3 th:if="${username != 'anonymousUser'}"><span>Welcome </span><span th:text="${username}"></span><span>!</span></h3>
+            <h3 th:if="${#httpServletRequest.remoteUser != null}"><span>Welcome </span><span th:text="${#httpServletRequest.remoteUser}"></span><span>!</span></h3>
+            <h2 th:if="${#httpServletRequest.isUserInRole('ROLE_USER')}">aaa</h2>
             <h1>Recommended products</h1>
             <div class="slider">
                 <ul class="slides">

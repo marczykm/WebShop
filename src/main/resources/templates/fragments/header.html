@@ -13,17 +13,17 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a th:href="@{/products}">Products</a></li>
-                    <li th:if="${username == 'anonymousUser'}"><a th:href="@{/login}">Login</a></li>
-                    <li th:if="${username == 'anonymousUser'}"><a th:href="@{/register}">Register</a></li>
-                    <li th:if="${username != 'anonymousUser'}"><a th:href="@{/account}">Your account</a></li>
-                    <li th:if="${username != 'anonymousUser'}"><a th:href="@{/logout}">Logout</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser == null}"><a th:href="@{/login}">Login</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser == null}"><a th:href="@{/register}">Register</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser != null}"><a th:href="@{/account}">Your account</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser != null}"><a th:href="@{/logout}">Logout</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a th:href="@{/products}">Products</a></li>
-                    <li th:if="${username == 'anonymousUser'}"><a th:href="@{/login}">Login</a></li>
-                    <li th:if="${username == 'anonymousUser'}"><a th:href="@{/register}">Register</a></li>
-                    <li th:if="${username != 'anonymousUser'}"><a th:href="@{/account}">Your account</a></li>
-                    <li th:if="${username != 'anonymousUser'}"><a th:href="@{/logout}">Logout</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser == null}"><a th:href="@{/login}">Login</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser == null}"><a th:href="@{/register}">Register</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser != null}"><a th:href="@{/account}">Your account</a></li>
+                    <li th:if="${#httpServletRequest.remoteUser != null}"><a th:href="@{/logout}">Logout</a></li>
                 </ul>
             </div>
         </nav>
